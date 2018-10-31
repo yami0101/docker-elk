@@ -9,7 +9,7 @@ services:
         ELK_VERSION: $ELK_VERSION
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-      - ./elasticsearc/data:/usr/share/elasticsearch/data
+      - ./elasticsearch/data:/usr/share/elasticsearch/data #Local data folder should have the user and group 1000:1000
     ports:
       - "9200:9200"
       - "9300:9300"
